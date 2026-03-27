@@ -6,6 +6,6 @@ services:
     tty: true
     stdin_open: true
     network_mode: host
-    command: px4sim
+    command: sleep infinity
     volumes:
       - ${HOME}/px4_app_test:/workspace/px4_app_test

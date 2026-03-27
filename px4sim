@@ -2,10 +2,4 @@
 set -e
 
 cd /workspace/PX4-Autopilot
-
-# Build if needed
-make px4_sitl
-
-# Run from the SITL rootfs directory
-cd /workspace/PX4-Autopilot/build/px4_sitl_default/rootfs
-exec ../bin/px4 -s etc/init.d-posix/rcS
+exec make px4_sitl_default none
