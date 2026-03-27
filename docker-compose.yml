@@ -1,0 +1,11 @@
+services:
+  px4:
+    build: .
+    container_name: px4-portable
+    working_dir: /workspace/PX4-Autopilot
+    tty: true
+    stdin_open: true
+    network_mode: host
+    command: px4sim
+    volumes:
+      - ${HOME}/px4_app_test:/workspace/px4_app_test
